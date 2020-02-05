@@ -84,7 +84,7 @@ function list(path){
 	  </ul> 
 	 </div> 
 	 <div class="mdui-row"> 
-	  <ul id="list" class="mdui-list"> 
+	  <ul id="list" class="mdui-list-item mdui-ripple"> 
 	  </ul> 
 	 </div>
 	 <div id="readme_md" class="mdui-typo" style="display:none; padding: 20px 0;"></div>
