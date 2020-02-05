@@ -216,7 +216,7 @@ function file_code(path){
 	var ext = name.split('.').pop();
 	var href = window.location.origin + path;
 	var content = `
-<div class="<div class="mdui-container-fluid nexmoe-item">">
+<div class="mdui-container-fluid nexmoe-item">
 <pre id="editor" ></pre>
 <div class="mdui-textfield">
 	<label class="mdui-textfield-label">Url</label>
