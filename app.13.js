@@ -10,13 +10,13 @@ document.write('<style>body{background-color:#fff;padding-bottom:60px;background
 // 初始化页面，并载入必要资源
 function init(){
     document.siteName = $('title').html();
-    $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-loaded");
+    $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-loaded mdui-container-fluid");
     var html = `
 <header class="mdui-appbar"> 
    <div id="nav" class="mdui-toolbar mdui-container"> 
    </div> 
 </header>
-<div id="content" class="mdui-container mdui-container-fluid"> 
+<div id="content" class="mdui-container"> 
 </div>
 	`;
     $('body').html(html);
