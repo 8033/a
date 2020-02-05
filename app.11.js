@@ -45,7 +45,7 @@ function title(path){
 // 渲染导航栏
 function nav(path){
     var html = "";
-    html += `<a href="/" class="mdui-typo-headline folder">${document.siteName}</a>`;
+    html += `<a href="/" class="mdui-typo-headline folder">  ${document.siteName}</a>`;
     var arr = path.trim('/').split('/');
     var p = '/';
     if(arr.length > 0){
@@ -84,7 +84,7 @@ function list(path){
 	  </ul> 
 	 </div> 
 	 <div class="mdui-row"> 
-	  <ul id="list" class="mdui-list-item mdui-ripple"> 
+	  <ul id="list" class="mdui-list-item"> 
 	  </ul> 
 	 </div>
 	 <div id="readme_md" class="mdui-typo" style="display:none; padding: 20px 0;"></div>
