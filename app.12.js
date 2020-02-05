@@ -10,13 +10,13 @@ document.write('<style>body{background-color:#fff;padding-bottom:60px;background
 // 初始化页面，并载入必要资源
 function init(){
     document.siteName = $('title').html();
-    $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
+    $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-loaded");
     var html = `
 <header class="mdui-appbar"> 
    <div id="nav" class="mdui-toolbar mdui-container"> 
    </div> 
 </header>
-<div id="content" class="mdui-container"> 
+<div id="content" class="mdui-container mdui-container-fluid"> 
 </div>
 	`;
     $('body').html(html);
@@ -45,7 +45,7 @@ function title(path){
 // 渲染导航栏
 function nav(path){
     var html = "";
-    html += `<a href="/" class="mdui-typo-headline folder">  ${document.siteName}</a>`;
+    html += `<a href="/" class="mdui-typo-headline folder">${document.siteName}</a>`;
     var arr = path.trim('/').split('/');
     var p = '/';
     if(arr.length > 0){
@@ -84,7 +84,7 @@ function list(path){
 	  </ul> 
 	 </div> 
 	 <div class="mdui-row"> 
-	  <ul id="list" class="mdui-list-item"> 
+	  <ul id="list" class="mdui-list mdui-ripple"> 
 	  </ul> 
 	 </div>
 	 <div id="readme_md" class="mdui-typo" style="display:none; padding: 20px 0;"></div>
