@@ -65,6 +65,7 @@ function nav(path){
 // 渲染文件列表
 function list(path){
 	var content = `
+	<div class="nexmoe-item"><div id="readme_md" class="mdui-typo" style="display:none; padding: 20px 0;"></div></div>
 	<div class="nexmoe-item">
 	<div id="head_md" class="mdui-typo" style="display:none;padding: 20px 0;"></div>
 
@@ -87,7 +88,6 @@ function list(path){
 	  <ul id="list" class="mdui-list mdui-ripple"> 
 	  </ul> 
 	 </div>
-	 <div id="readme_md" class="mdui-typo" style="display:none; padding: 20px 0;"></div>
 	 </div>
 	`;
 	$('#content').html(content);
