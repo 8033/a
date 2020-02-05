@@ -12,7 +12,7 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
     var html = `
-<header class="nexmoe-item mdui-typo"> 
+<header class="mdui-appbar mdui-color-theme"> 
    <div id="nav" class="mdui-toolbar mdui-container"> 
    </div> 
 </header>
@@ -41,7 +41,8 @@ function title(path){
     path = decodeURI(path);
     $('title').html(document.siteName+' - '+path);
 }
-
+<div class="nexmoe-item">
+<div class="mdui-typo">
 // 渲染导航栏
 function nav(path){
     var html = "";
@@ -61,6 +62,7 @@ function nav(path){
     }
     $('#nav').html(html);
 }
+</div></div>
 
 // 渲染文件列表
 function list(path){
