@@ -45,7 +45,7 @@ function title(path){
 // 渲染导航栏
 function nav(path){
     var html = "";
-    html += `<a href="/" class="mdui-typo-headline folder">/</a>`;
+    html += `<a href="/" class="folder">/</a>`;
     var arr = path.trim('/').split('/');
     var p = '/';
     if(arr.length > 0){
