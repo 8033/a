@@ -12,8 +12,8 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-loaded mdui-container-fluid");
     var html = `
-<header class="mdui-appbar"> 
-   <div id="nav" class="mdui-toolbar mdui-container"> 
+<header class="mdui-container mdui-container-fluid"> 
+   <div id="nav" class="mdui-toolbar nexmoe-item"> 
    </div> 
 </header>
 <div id="content" class="mdui-container"> 
@@ -45,7 +45,7 @@ function title(path){
 // 渲染导航栏
 function nav(path){
     var html = "";
-    html += `<a href="/" class="mdui-typo-headline folder">${document.siteName}</a>`;
+    html += `<a href="/" class="mdui-typo-headline folder">/</a>`;
     var arr = path.trim('/').split('/');
     var p = '/';
     if(arr.length > 0){
@@ -126,7 +126,7 @@ function list_files(path,files){
         if(item['mimeType'] == 'application/vnd.google-apps.folder'){
             html +=`<li class="mdui-list-item mdui-ripple"><a href="${p}" class="folder">
 	            <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
-	            <i class="mdui-icon material-icons">folder_open</i>
+	            <i class="mdui-icon material-icons">folder</i>
 	              ${item.name}
 	            </div>
 	            <div class="mdui-col-sm-3 mdui-text-right">${item['modifiedTime']}</div>
