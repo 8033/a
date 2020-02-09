@@ -254,8 +254,8 @@ function file_code(path){
 function file_video(path){
 	var url = window.location.origin + path;
 	var content = `
-<link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-flash@2.2.1/dist/videojs-flash.min.js">
+<script src="https://cdn.jsdelivr.net/npm/videojs-flash@2.2.1/dist/videojs-flash.min.js"></script>
 <div class="mdui-container-fluid nexmoe-item">
 	<br>
 	<div class="mdui-center" id="dplayer"></div>
@@ -264,15 +264,9 @@ function file_video(path){
 	</video>
 	<br>
 
-<script>
-const dp = new DPlayer({
-	container: document.getElementById('dplayer'),
-	lang:'zh-cn',
-	video: {
-	    url: '${url}',
-	},
-});
-</script>
+<video class="video-js mdui-center" preload controls>
+	  <source src="${url}" type="video/mp4">
+	</video>
 
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
