@@ -254,13 +254,26 @@ function file_code(path){
 function file_video(path){
 	var url = window.location.origin + path;
 	var content = `
+<link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
 <div class="mdui-container-fluid nexmoe-item">
 	<br>
-  <video src="${url}" controls="controls">错误</video>
+	<div class="mdui-center" id="dplayer"></div>
 	<video class="mdui-video-fluid mdui-center" preload controls>
 	  <source src="${url}" type="video/mp4">
 	</video>
 	<br>
+
+<script>
+const dp = new DPlayer({
+	container: document.getElementById('dplayer'),
+	lang:'zh-cn',
+	video: {
+	    url: '${url}',
+	},
+});
+</script>
+
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Url</label>
