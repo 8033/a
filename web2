@@ -22,7 +22,7 @@
 </div>
 <div class="nexmoe-item">
 <div class="mdui-typo-title"><i class="mdui-icon material-icons">&#xe2c0;</i> <strong> 加速下载</strong></div>
-<h7>解决某些资源下载缓慢或无法下载的问题，前提是你的网络能顺畅连接Cloudflare</h7>
+<h7>解决某些资源下载缓慢或无法下载的问题<br>前提是你的网络能顺畅连接Cloudflare</h7>
 
 <div class="mdui-textfield">
   <input class="mdui-textfield-input" input id="txtURL" type="text" placeholder="请输入文件直链"/>
